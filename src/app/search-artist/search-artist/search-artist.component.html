@@ -1,0 +1,20 @@
+<div fxLayout="column">
+    <div class="search-container" fxLayoutAlign="center center">
+        <mat-toolbar fxFlex="50" fxFlex.sm="100" fxFlex.xs="100" fxLayout="row" class="mat-toolbar">
+            <button matTooltip="Reset Search" (click)="resetForm()" class="close-icon" mat-icon-button>
+                <mat-icon>close</mat-icon>
+            </button>
+            <input matInput class="search-control" [formControl]="searchArtist" type="text" autocomplete="off"
+                (keyup.enter)="searchFunc()" placeholder="Search Artists...">
+            <button matTooltip="Search Artists" (click)="searchFunc()" class="search-icon" mat-icon-button>
+                <mat-icon>search</mat-icon>
+            </button>
+        </mat-toolbar>
+    </div>
+    <div>
+        <app-searched-result *ngIf="searchedResult" [artistData]="searchedResult"></app-searched-result>
+    </div>
+</div>
+<div class="loader-app" *ngIf="showLoader">
+    <mat-spinner></mat-spinner>
+</div>

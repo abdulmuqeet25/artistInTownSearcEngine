@@ -1,0 +1,47 @@
+.img-card {
+    height: 180px !important;
+    width: 180px !important;
+  }
+  
+  .header-card {
+    margin-top: 10px;
+  }
+  
+  .event-details {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 24px;
+    margin-top: 10px;
+    color: #5e5e5e;;
+  }
+  
+  .event-details:hover {
+    text-decoration: underline;
+  }
+  
+  .margin-event {
+    margin: 10px;
+  }
+  
+  .event-date {
+    font-weight: bold;
+  }
+
+  .mat-accordion .mat-expansion-panel:last-of-type {
+    margin-bottom: 15px !important;
+  }
+  
+  .mat-expansion-panel-header {
+    height: 70px !important;
+  }
+  
+  .event-detail {
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    color: lightgray;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 36px;
+    font-style: italic;
+  }
+ 

@@ -1,0 +1,75 @@
+.img-card {
+  height: 180px !important;
+  width: 180px !important;
+}
+
+.header-card {
+  margin-top: 10px;
+}
+
+.searched-result-section {
+  margin-top: 2px;
+}
+
+.fb-logo {
+  fill: #4267B2;
+  height: 26px;
+  cursor: pointer;
+}
+
+.up-event-text {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.event-details {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 10px;
+  color: #5e5e5e;;
+}
+
+.event-details:hover {
+  text-decoration: underline;
+}
+
+.event-container {
+  margin-top: 20px;
+}
+
+.mat-accordion .mat-expansion-panel:last-of-type {
+  margin-bottom: 15px !important;
+}
+
+.mat-expansion-panel-header {
+  height: 70px !important;
+}
+
+.event-detail {
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  color: lightgray;
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 36px;
+  font-style: italic;
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+  background: #5e5e5e;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+.show-scroll {
+  opacity: 1;
+}

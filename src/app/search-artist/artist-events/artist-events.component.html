@@ -1,0 +1,88 @@
+<div fxLayoutAlign="center center">
+    <h2 class="event-detail">Events in Your Area</h2>
+</div>
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card fxFlex="40" fxFlex.sm="100" fxFlex.xs="100" *ngFor="let artistEvent of artistEvent" class="margin-event">
+        <mat-card-header fxLayout="column" fxLayoutAlign="center center">
+            <img class="img-card" mat-card-avatar [src]="artistData.image_url" />
+            <div class="header-card">
+                <mat-card-title>{{artistData.name}}</mat-card-title>
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                        <div fxFlex="100" fxLayout="row">
+                            <div fxFlex="25" fxLayout="column">
+                                <span class="event-date">{{artistEvent.datetime | date: 'mediumDate' }}</span>
+                            </div>
+                            <div fxFlex="45">
+                                <mat-card-subtitle class="mat-card-subtitle">{{artistEvent.venue.name}}
+                                </mat-card-subtitle>
+                            </div>
+                            <div fxFlex="25">
+                                <mat-card-subtitle class="mat-card-subtitle">{{artistEvent.venue.location}}
+                                </mat-card-subtitle>
+                            </div>
+                        </div>
+                    </mat-expansion-panel-header>
+                    <div fxLayout="column">
+                        <div fxLayout="row">
+                            <h2 class="event-detail">Event Details</h2>
+                        </div>
+                        <div fxLayout="row">
+                            <div fxFlex="50" fxLayout="column">
+                                <mat-card-title>
+                                    Date & Time:
+                                </mat-card-title>
+                                <mat-card-subtitle>
+                                    <span class="event-date">{{artistEvent.datetime | date:
+                                        'mediumDate'}}</span> {{artistEvent.datetime | date: 'shortTime' }}
+                                </mat-card-subtitle>
+                            </div>
+                            <div fxFlex="50" fxLayout="column">
+                                <mat-card-title>
+                                    Venue:
+                                </mat-card-title>
+                                <mat-card-subtitle>
+                                    {{artistEvent.venue.name}}
+                                </mat-card-subtitle>
+                            </div>
+                        </div>
+                        <div fxLayout="row">
+                            <div fxFlex="50" fxLayout="column">
+                                <mat-card-title>
+                                    City:
+                                </mat-card-title>
+                                <mat-card-subtitle>
+                                    {{artistEvent.venue.city}}
+                                </mat-card-subtitle>
+                            </div>
+                            <div fxFlex="50" fxLayout="column">
+                                <mat-card-title>
+                                    Country:
+                                </mat-card-title>
+                                <mat-card-subtitle>
+                                    {{artistEvent.venue.country}}
+                                </mat-card-subtitle>
+                            </div>
+                        </div>
+                        <div fxLayout="row">
+                            <div fxFlex="100" fxLayout="column">
+                                <mat-card-title>
+                                    {{artistEvent.offers[0].type}}
+                                </mat-card-title>
+                                <mat-card-subtitle style="color: lightgreen;">
+                                    {{artistEvent.offers[0].status}}
+                                </mat-card-subtitle>
+                            </div>
+                        </div>
+                    </div>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card-content>
+        <mat-card-footer>
+        </mat-card-footer>
+    </mat-card>
+</div>
