@@ -68,7 +68,7 @@
                                 </mat-card-subtitle>
                             </div>
                         </div>
-                        <div fxLayout="row">
+                        <div *ngIf="artistEvent.offers[0]" fxLayout="row">
                             <div fxFlex="100" fxLayout="column">
                                 <mat-card-title>
                                     {{artistEvent.offers[0].type}}
